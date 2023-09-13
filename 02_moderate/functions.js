@@ -8,6 +8,7 @@ function sayMyName(){
 }
 
 // sayMyName();
+
 function addTwoNumbers(number1, number2){
     console.log(number1+number2);
 }
@@ -82,11 +83,11 @@ function handleObjects(anyObject){
     console.log(`user name is ${anyObject.username} and price is ${anyObject.price}`);
 }
 
-handleObjects(user)  /* calling function by passing object */
-handleObjects({     /*passing directly object */
-    username: "rahat ",
-    price: 399
-})
+// handleObjects(user)  /* calling function by passing object */
+// handleObjects({     /*passing directly object */
+//     username: "rahat ",
+//     price: 399
+// })
 
 
 const myNewArray=[200,400,600,100]
@@ -95,8 +96,8 @@ function returnSecondValue(getArray){
     return getArray[1]
 }
 
-console.log(returnSecondValue(myNewArray));
-console.log(returnSecondValue([900,800,700,600]));
+// console.log(returnSecondValue(myNewArray));
+// console.log(returnSecondValue([900,800,700,600]));
 
 
 
@@ -104,3 +105,79 @@ console.log(returnSecondValue([900,800,700,600]));
 const addTwo= function(num){
     return num+2
 }
+
+
+
+
+
+function greet(name, age) {
+    console.log(`Hello, ${name}. You are ${age} years old.`);
+  }
+  
+  let person = {
+    name: "Alice",
+    age: 30,
+  };
+  
+  // Using apply to call the 'greet' function with 'person' as the context and arguments
+//   greet.apply(person, [person.name, person.age]);
+
+
+
+
+function exampleFunction() {
+    
+    console.log(arguments[0]); 
+    console.log(arguments[1]);
+    console.log(arguments.length);
+  }
+// exampleFunction("Hello", "World");
+
+
+
+let testFunct = function(){
+    let username = "rahmat ali"
+    console.log(`hello,welcome ${this.username}`);
+}
+const boundFunct = testFunct.bind({ username: "John" })
+// console.log(boundFunct());
+
+
+
+function greet(greeting) {
+    console.log(`${greeting}, ${this.name}`);
+  }
+  const person2 = {
+    name: "Alice",
+  };
+// greet.call(person, "Hello");
+
+
+
+function exampleFunction(param1, param2, ...restParams) {
+    // Function body
+  }
+  
+// console.log(exampleFunction.length);
+
+
+// console.log( testFunct.toString());
+// console.log(typeof testFunct.toString());
+
+
+// console.log(testFunct.name);
+
+
+
+function Person3(name) {
+    this.name = name;
+  }
+  Person3.prototype.sayHello = function() {
+    console.log(`Hello, my name is ${this.name}`);
+  };
+  const personA = new Person3("Alice");
+  const personB = new Person3("Bob");
+
+//   personA.sayHello(); 
+//   personB.sayHello(); 
+  
